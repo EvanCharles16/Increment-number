@@ -31,11 +31,12 @@ class Kalkulasi extends Component {
     }
 
     return (
-      <div className="main">
-        <Button classname="button" onClick={this.IncrementItem}>+</Button>
-        <h3>{this.state.count}</h3>
-        <Button onClick={this.DecrementItem}>-</Button>
-        <br/><br/>
+      <div>
+          <Wrapper>
+            <Button classname="button" onClick={this.IncrementItem}>+</Button>
+            <Input value={this.state.count}></Input>
+            <Button onClick={this.DecrementItem}>-</Button>
+          </Wrapper>
         <Button className="reset" onClick={this.reset}>Reset</Button>
        
       </div>
@@ -49,10 +50,23 @@ const Button = styled.button`
      color : white;
      border-radius : 30%;
      font-size: 40px;   
-     padding : 10px 20px;
+     padding : 10px 40px;
 
      &:hover {
-         color:white;
+         color: black;
          background-color: skyblue;
      }
+`
+
+const Wrapper = styled.section`
+     margin-bottom : 40px;
+     display : flex;
+     flex-direction : row;
+`
+
+const Input = styled.input`
+     text-align : center;
+     margin : 0 20px;
+     border-radius : 20px;
+     border : 2px ridge grey;
 `

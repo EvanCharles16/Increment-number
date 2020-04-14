@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>"My First ReactJs' Project"</h1>
         <img src={logo} className="App-logo" alt="logo" />
           <Kalkulasi/>
-          <h1></h1>
       </header>
     </div>
   );
