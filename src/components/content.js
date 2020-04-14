@@ -31,7 +31,7 @@ class Kalkulasi extends Component {
     }
 
     return (
-      <div>
+      <div className="main">
         <Button classname="button" onClick={this.IncrementItem}>+</Button>
         <h3>{this.state.count}</h3>
         <Button onClick={this.DecrementItem}>-</Button>
@@ -50,4 +50,9 @@ const Button = styled.button`
      border-radius : 30%;
      font-size: 40px;   
      padding : 10px 20px;
+
+     &:hover {
+         color:white;
+         background-color: skyblue;
+     }
 `
